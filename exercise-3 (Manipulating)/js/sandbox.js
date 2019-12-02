@@ -1,16 +1,13 @@
 // 1. Add five new list items to the end of the unordered list #myList.
-let myItems = [];
-let myList = $( "#myList" );
-for (let i = 8; i <= 12; i++ ) {
-  myItems.push( "<li>List item " + i + "</li>" );
+for (let i=8; i<=12; i++){
+$('#myList').append('<li>List item ' + i + '</li>')
 }
-myList.append( myItems.join( "" ));
 
 
 // 2. Remove the odd list items    
 $("#myList li:odd").remove();    
     
-
+	
 // 3. Add another h2 and another paragraph to the last div.module
 let newHeading = $( "<h2>", {
   html: "This is a new heading",
