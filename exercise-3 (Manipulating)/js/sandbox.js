@@ -1,6 +1,6 @@
 // 1. Add five new list items to the end of the unordered list #myList.
 for (let i=8; i<=12; i++){
-$('#myList').append('<li>List item ' + i + '</li>')
+  $('#myList').append('<li>List item ' + i + '</li>')
 }
 
 
