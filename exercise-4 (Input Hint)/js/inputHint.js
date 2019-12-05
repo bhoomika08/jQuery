@@ -8,9 +8,9 @@ class InputHint {
 
   init() {
     this.setText(this.searchInput);
-  	this.appendClass(this.searchInput, this.hintClass);
-  	this.removeElement(this.searchLabel);
-  	this.bindEvents();
+    this.appendClass(this.searchInput, this.hintClass);
+    this.removeElement(this.searchLabel);
+    this.bindEvents();
   }
 
 //1. Set the value of the search input to the text of the label element
@@ -20,12 +20,12 @@ class InputHint {
 
 //2. Add a class of "hint" to the search input
   appendClass(element, cssClass) {
-  	element.addClass(cssClass);
+    element.addClass(cssClass);
   }
 
 //3. Remove the label element
   removeElement(element) {
-  	element.remove();
+    element.remove();
   }
 
   bindEvents() {
