@@ -13,7 +13,7 @@ class TabbedNavigation {
   }
 
 //1. Hide all of the modules.
-	hideAll(elements) {
+  hideAll(elements) {
     elements.hide();
   }
 
@@ -23,7 +23,7 @@ class TabbedNavigation {
   }
 
 //3. Iterate over the modules using $.fn.each. For each module, use the text of the h2 element as the text for a list item that you add to the unordered list element.
-	addListItemToUnorderedList() {
+  addListItemToUnorderedList() {
     this.allModules.each((index, value) => {
       var $listItemText = $(value).find('h2').text();
       var $listItem = $('<li>' + $listItemText + '</li>');
