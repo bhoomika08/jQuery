@@ -1,8 +1,8 @@
 class TabbedNavigation {
-	constructor() {
+  constructor() {
     this.allModules = $('.module');
     this.unorderedList = $('<ul></ul>');
-	}
+  }
 
   init() {
     this.hideAll(this.allModules);
