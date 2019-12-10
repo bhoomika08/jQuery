@@ -29,7 +29,7 @@ class InputHint {
   }
 
   bindEvents() {
-    this.searchInput.bind({
+    this.searchInput.on({
       "focus": () => this.bindFocusEvent(this.searchInput),
       "blur": () => this.bindBlurEvent(this.searchInput)
     });
