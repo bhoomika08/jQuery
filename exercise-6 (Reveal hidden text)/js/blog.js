@@ -1,6 +1,6 @@
 class HiddenText {
-  constructor() {
-    this.$module = $('div#blog');
+  constructor(moduleSelector) {
+    this.$module = $(moduleSelector);
   }
 
   init() {
@@ -9,7 +9,7 @@ class HiddenText {
 
   bindEvents() {
     let _this = this;
-    this.$module.find("li").bind({
+    this.$module.find(".blog_list").bind({
       "click": function() {
         event.preventDefault();
         _this.showHideText(this);
@@ -21,9 +21,9 @@ class HiddenText {
 //2. Clicking on another headline should slide down its excerpt paragraph, and slide up any other currently showing excerpt paragraphs.
   showHideText(listItem) {
     let $listItem = $(listItem);
-    $listItem.find("p.excerpt").slideToggle("slow");
-    $listItem.siblings().find("p:visible").slideUp("slow");
+    $listItem.find(".excerpt").slideToggle("slow");
+    $listItem.siblings().find(".excerpt:visible").slideUp("slow");
   }
 }
 
-new HiddenText().init();
+new HiddenText('#blog').init();
