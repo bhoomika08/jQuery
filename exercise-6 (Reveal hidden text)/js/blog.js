@@ -1,4 +1,4 @@
-class HiddenText {
+class Blog {
   constructor() {
     this.$module = $('div#blog');
   }
@@ -9,11 +9,9 @@ class HiddenText {
 
   bindEvents() {
     let _this = this;
-    this.$module.find("li").bind({
-      "click": function() {
-        event.preventDefault();
-        _this.showHideText(this);
-      } 
+    this.$module.find("li").on("click", function() {
+      event.preventDefault();
+      _this.showHideText(this); 
     });
   }
 
@@ -26,4 +24,4 @@ class HiddenText {
   }
 }
 
-new HiddenText().init();
+new Blog().init();
