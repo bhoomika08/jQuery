@@ -1,4 +1,4 @@
-class HiddenText {
+class Blog {
   constructor(moduleSelector) {
     this.$module = $(moduleSelector);
   }
@@ -9,12 +9,11 @@ class HiddenText {
 
   bindEvents() {
     let _this = this;
-    this.$module.find(".blog_list").bind({
-      "click": function() {
+    this.$module.find(".blog_list").on("click", function() {
         event.preventDefault();
         _this.showHideText(this);
       } 
-    });
+    );
   }
 
 //1. Clicking on a headline in the #blog div should slide down the excerpt paragraph
@@ -26,4 +25,4 @@ class HiddenText {
   }
 }
 
-new HiddenText('#blog').init();
+new Blog('#blog').init();
