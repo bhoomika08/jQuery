@@ -1,4 +1,4 @@
-class TabbedNavigation {
+class Tabs {
   constructor() {
     this.allModules = $('.module');
     this.unorderedList = $('<ul></ul>');
@@ -26,7 +26,7 @@ class TabbedNavigation {
   addListItemToUnorderedList() {
     this.allModules.each((index, value) => {
       var $listItemText = $(value).find('h2').text();
-      var $listItem = $('<li>' + $listItemText + '</li>');
+      var $listItem = $('<li class="module_heading">' + $listItemText + '</li>');
       this.unorderedList.append($listItem);
     });
   }
@@ -34,10 +34,8 @@ class TabbedNavigation {
 //4. Bind a click event to the list item
   bindEvents() {
     let _this = this;
-    this.unorderedList.find('li').bind({
-      'click': function() {
-        _this.bindClickEventToListItem(this);
-      }
+    this.unorderedList.find('.module_heading').on('click', function() {
+      _this.bindClickEventToListItem(this);
     });
   }
 
@@ -52,8 +50,8 @@ class TabbedNavigation {
 //5. Finally, show the first tab.
   showFirstTab() {
     this.allModules.first().show();
-    this.unorderedList.find('li:first').addClass("current");
+    this.unorderedList.find('.module_heading:first').addClass("current");
   }
 }
 
-new TabbedNavigation().init();
+new Tabs().init();
