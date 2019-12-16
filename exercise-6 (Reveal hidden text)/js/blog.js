@@ -9,7 +9,7 @@ class Blog {
 
   bindEvents() {
     let _this = this;
-    this.$module.find("li").on("click", function() {
+    this.$module.find(".blog_list").on("click", function() {
       event.preventDefault();
       _this.showHideText(this); 
     });
