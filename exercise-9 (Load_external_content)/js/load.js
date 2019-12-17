@@ -32,7 +32,7 @@ class Load {
 
 // 3. Use the $.fn.load method to load the appropriate content from /exercises/data/blog.html into the target div.  
   loadContent(element) {
-    let id = $(element).attr("data-post");
+    let id = $(element).data("post");
     //$(element).parent().data("targetDiv").slideToggle("slow");
     $(element).parent().data("targetDiv").load('data/blog.html ' + id);
    // $(element).parent().data("targetDiv").slideToggle("slow");
