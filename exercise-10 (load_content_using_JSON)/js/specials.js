@@ -1,8 +1,15 @@
 class Specials {
-  constructor(specialsId) {
-    this.$specials = $(specialsId);
-    this.$select = $("select");
-    this.$form = $("#specials form");
+  constructor() {
+    const selector = {
+      specialsId: "#specials",
+      selectTag: "select",
+      specialsForm: "#specials form",
+      specialsButton: ".buttons",
+    }
+    this.$specials = $(selector.specialsId);
+    this.$select = $(selector.selectTag);
+    this.$form = $(selector.specialsForm);
+    this.$specialsButton = $(selector.specialsButton);
     this.$targetDiv = $("<div></div>");
   }
   
@@ -57,7 +64,7 @@ createTargetDiv() {
       this.$targetDiv.empty();
       this.$targetDiv.css("color", color);
       this.$targetDiv.append('<h2>' + title + '</h2>' + text + '<br>')
-      this.$targetDiv.append("<img src='" + imageSource + "'>");
+      this.$targetDiv.append(`<img src='${imageSource}'>`);
     } else {
       this.$targetDiv.empty();
     }
@@ -65,9 +72,9 @@ createTargetDiv() {
 
 // 4. Finally, because the form is now Ajax-enabled, remove the submit button from the form.  
   removeSubmitButton() {
-    this.$specials.find(".buttons").remove();
+    this.$specials.find(this.$specialsButton).remove();
   }
 }
 
-new Specials("#specials").init();
+new Specials().init();
   
