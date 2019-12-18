@@ -1,0 +1,24 @@
+#mainContainer {
+  padding: 30px 130px 50px 50px;
+  border: solid 1px #000000;
+  background-color: rgb(241, 241, 90);
+}
+
+#addButton {
+  position: fixed;
+  right: 20px;
+  width: 80px;
+  height: 30px;
+  top: 22px;
+}
+
+#mainContainer .row {
+  height: 50px;
+  width: 400px;
+  background-color: rgb(202, 193, 193);
+  margin: 10px;
+}
+
+#mainContainer .highlight {
+  background-color: lightblue;
+}
