@@ -1,0 +1,32 @@
+#mainContainer {
+  padding: 30px 130px 50px 50px;
+  border: solid 1px #000000;
+  background-color: rgb(248, 248, 145);
+}
+
+#timerDiv {
+  position: fixed;
+  right: 20px;
+  top: 22px;
+}
+  
+#startButton {
+  width: 80px;
+  height: 30px;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+.highlight-red {
+  color: red;
+}
+
+.border-default {
+  padding: 30px 130px 50px 50px;
+  border: solid 1px #000000;
+}
+  
